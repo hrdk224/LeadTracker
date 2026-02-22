@@ -1,0 +1,28 @@
+{
+  "name": "leadtracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrdk224/LeadTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrdk224/LeadTracker/issues"
+  },
+  "homepage": "https://github.com/hrdk224/LeadTracker#readme",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
