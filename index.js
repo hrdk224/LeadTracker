@@ -5,14 +5,22 @@ const inputEl = document.getElementById("input")
 const ulEl = document.getElementById("ul-el")
 let leads = []
 
-
+tabBtn.addEventListener("click", function () {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        leads.push(tab[0].url)
+        localStorage.setItem("leads", JSON.stringify(leads))
+        render(leads)
+    })
+})
 saveBtn.addEventListener("click", function () {
     leads.push(inputEl.value)
     inputEl.value = " "
+    localStorage.setItem("leads", JSON.stringify(leads))
     render(leads)
 })
 
 deleteBtn.addEventListener("dblclick", function () {
+    localStorage.clear()
     leads = []
     render(leads)
 })
@@ -28,3 +36,5 @@ function render(arr) {
     }
     ulEl.innerHTML = lead_tags
 }
+
+
